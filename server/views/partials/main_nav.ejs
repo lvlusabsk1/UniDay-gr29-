@@ -1,0 +1,34 @@
+<!--NavBar -->
+<nav class="navbar navbar-expand-lg navbar-success bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Run Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> 
+
+        <li class="nav-item">
+        <% if (title == "Home") { %>
+          <a class="nav-link active" href="/home">
+        <% } else { %>
+          <a class="nav-link" href="/home">
+        <% } %>
+          <i class="fa-solid fa-lg fa-house-user"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "run") { %>
+          <a class="nav-link active" href="/runs">
+        <% } else { %>
+          <a class="nav-link" href="/runs">
+        <% } %>
+          <i class="fa-solid fa-person-running"></i> Running </a>
+        </li>
+
+        </li>
+
+    </div>
+  </div>
+</nav>

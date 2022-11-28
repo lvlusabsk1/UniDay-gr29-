@@ -1,0 +1,65 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Content -->
+<main>
+  <div class="container">
+    
+    <div class = "row">
+    <div class = "col-md-offset-3 col-md-10">
+        <h1><%=title%></h1>
+        <a href="/runs/add" class ="btn btn-primary" role="button">
+            <i class="fa-regular fa-plus"></i> Add Run</a>
+        <br>
+        <br>
+   <table class = "table table-bordered table-striped table-hover">
+       
+        <tr class = "d-flex">
+        <th class = "text-center col-3">Day</th>
+        
+        <th class = "text-center col-3">Name</th>
+        
+        <th class = "text-center col-2">Distance (km)</th>
+        
+        <th class = "text-center col-2">Time (secs)</th>
+        
+        <th class = "text-center col-2">Speed (km/h)</th>
+
+        <th class = "text-center col-1"></th>
+
+        <th class = "text-center col-1"></th>
+        </tr>
+        <!-- repeat template to show db -->
+        <% for(let count=0; count<Runs.length; count++){ %>
+            <tr class = "d-flex">
+                <td class = "text-center col-3"><%= Runs[count].Day %></td>
+                <td class = "text-center col-3"><%= Runs[count].Name %></td> 
+                <td class = "text-center col-2"><%= Runs[count].Distance %></td>
+                <td class = "text-center col-2"><%= Runs[count].Time %></td>
+                <td class = "text-center col-2"><%= Runs[count].Speed %></td>
+                <td class = "text-center col-1">
+                    <a href="/runs/edit/<%= Runs[count]._id %>"
+                        class ="btn btn-primary"> 
+                        <i class="fas fa-pencil-alt"></i> Edit </a>
+                </td>
+                <td class = "text-center col-1">
+                    <a href="/runs/delete/<%= Runs[count]._id %>"
+                        class ="btn btn-danger"> 
+                        <i class="fas fa-trash-alt"></i> Delete </a>
+                </td>
+               
+            </tr>
+
+        <%} %>
+
+   </table>
+
+   
+    </div>
+    </div>
+
+</div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
+
+
