@@ -1,7 +1,7 @@
 This is the project of group 29 by
 Saahil kassam
 Katheer Senthil Vel
-Loris Elyon
+Loris Nyirubutama
 Sreejon Chaudary
 Mohammad Musaab
 
